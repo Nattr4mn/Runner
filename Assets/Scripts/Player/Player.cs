@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         controller.KeyboardController();
-        //controller.TouchController();
+        controller.TouchController();
         move.Move(target);
     }
 }

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ObjectsController : MonoBehaviour
 {
-    [Range(1, 40)] public float speed;
-    [Range(1, 40)] public float maxSpeed;
+    public float speed;
+    public float maxSpeed;
     public float speedChange;
     public float timeToAcceleration;
     public float distanceSpawn;

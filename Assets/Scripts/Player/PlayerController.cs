@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     Transform controller;
+    bool directionChosen = false;
+    Vector2 startPos = new Vector2();
+    Vector2 direction = new Vector2();
 
     public void Init(Transform controller)
     {
@@ -13,38 +16,49 @@ public class PlayerController : MonoBehaviour
 
     public void KeyboardController()
     {
-        if (Input.GetAxis("Horizontal") != 0)
-        {
-            Move(-Input.GetAxis("Horizontal"));
-        }
+        if (Input.GetAxis("Horizontal") > 0.1f)
+            Move(-1);
+        else if (Input.GetAxis("Horizontal") < -0.1f)
+            Move(1);
+
     }
 
     public void TouchController()
     {
-        if (Input.touchCount > 0)
-        {
+
+        if (Input.touchCount > 0) 
+        { 
             Touch touch = Input.GetTouch(0);
-            float lastPos = 0, startPos = 0;
 
-            switch(touch.phase)
+            switch (touch.phase) 
             {
-                case TouchPhase.Began:
-                    startPos = touch.position.x;
-                    break;
+                case TouchPhase.Began : 
+                    startPos = touch.position; 
+                    directionChosen = false; 
+                    break; 
 
-                case TouchPhase.Moved:
-                    lastPos = touch.position.x;
-                    break;
+                case TouchPhase.Moved : 
+                    direction = touch.position - startPos; 
+                    break; 
 
-                case TouchPhase.Ended:
-                    if (lastPos - startPos > 0) Move(1f); else Move(-1f);
-                    break;
-            }
-        }
+                case TouchPhase.Ended : 
+                    directionChosen = true;
+                    break; 
+            } 
+        } 
+
+        if (directionChosen) 
+        { 
+            if(direction.x - startPos.x > 0)
+                Move(-1);
+            if(direction.x - startPos.x < 0)
+                Move(1);
+        } 
     }
 
     private void Move(float side)
     {
+        print(side);
         controller.position = Vector3.MoveTowards(controller.position, new Vector3(side * 2.5f, controller.position.y, controller.position.z), 50 * Time.deltaTime);
     }
 }
