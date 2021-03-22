@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
     public Transform target;
     public GameObject player;
+    public int points = 0;
 
     PlayerController controller;
     PlayerMove move;

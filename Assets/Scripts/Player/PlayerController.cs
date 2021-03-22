@@ -39,6 +39,10 @@ public class PlayerController : MonoBehaviour
 
                 case TouchPhase.Moved : 
                     direction = touch.position - startPos; 
+                    if(direction.x - startPos.x > 0)
+                        Move(-1);
+                    if(direction.x - startPos.x < 0)
+                        Move(1);
                     break; 
 
                 case TouchPhase.Ended : 
@@ -49,10 +53,10 @@ public class PlayerController : MonoBehaviour
 
         if (directionChosen) 
         { 
-            if(direction.x - startPos.x > 0)
-                Move(-1);
-            if(direction.x - startPos.x < 0)
-                Move(1);
+                    if(direction.x - startPos.x > 0)
+                        Move(-1);
+                    if(direction.x - startPos.x < 0)
+                        Move(1);
         } 
     }
 

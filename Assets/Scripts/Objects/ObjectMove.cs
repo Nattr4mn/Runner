@@ -15,6 +15,7 @@ public class ObjectMove : MonoBehaviour
         this.maxSpeed = maxSpeed;
         this.speedChange = speedChange;
         this.timeToAcceleration = timeToAcceleration;
+        StartCoroutine(Acceleration());
     }
 
     public void Move(GameObject obj)
@@ -22,18 +23,12 @@ public class ObjectMove : MonoBehaviour
         obj.transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 
-    public void StartAcceleration()
-    {
-        StartCoroutine(Acceleration());
-    }
-
     IEnumerator Acceleration()
     {
-        yield return new WaitForSeconds(timeToAcceleration);
-
-        speed += speedChange;
-
-        if (speed < maxSpeed)
-            StartCoroutine(Acceleration());
+        while(speed < maxSpeed)
+        {
+            yield return new WaitForSeconds(timeToAcceleration);
+            speed += speedChange;
+        }
     }
 }

@@ -16,6 +16,11 @@ public class Spawner : MonoBehaviour
         this.distanceToDestroy = distanceToDestroy;
     }
 
+    public virtual void Spawn()
+    {
+        Instantiate(spawnObject[Random.Range(0, spawnObject.Length)], transform.position, Quaternion.identity, transform);
+    }
+
     public virtual void Spawn(float offset)
     {
         int[] range = new int[] { -1, 1 };
