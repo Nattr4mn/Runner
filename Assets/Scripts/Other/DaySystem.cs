@@ -4,8 +4,8 @@ using System.Collections;
 
 public class DaySystem : MonoBehaviour
 {
-	public float fullDay = 120f; // сколько длиться день, в секундах
-	[Range(0, 1)] public float currentTime; // текущее время суток
+	public float fullDay = 120f;
+	[Range(0, 1)] public float currentTime;
 
 	void Update()
 	{

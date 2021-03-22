@@ -15,7 +15,7 @@ public class LampSystem : MonoBehaviour
 
     void Update()
     {
-        if (globalLight.currentTime * 24 >= 7 && globalLight.currentTime * 24 <= 16)
+        if (globalLight.currentTime * 24 >= 7 && globalLight.currentTime * 24 <= 18)
             transform.GetComponent<Light>().intensity = 0;
         else
             transform.GetComponent<Light>().intensity = intensity;
