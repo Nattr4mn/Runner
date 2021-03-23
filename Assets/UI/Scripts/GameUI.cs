@@ -8,27 +8,42 @@ public class GameUI : MonoBehaviour
 {
     public Player player;
     public Text pointsCountText;
+    public GameObject gameOverScreen;
 
     private void Update() 
     {
+        GameOver();
         pointsCountText.text = player.points.ToString();
     }
 
+    public void Pause() { Time.timeScale = 0f; }
+    public void Continue() { Time.timeScale = 1f; }
 
-    public void Pause()
+    public void LoadLevel(int lvl)
     {
-        Time.timeScale = 0f;
+        Continue();
+        SceneManager.LoadScene(lvl);
     }
 
-    public void Continue()
+    private void GameOver()
     {
-        Time.timeScale = 1f;
+        if(player.life == false)
+        {
+            for(int i = 0; i < transform.childCount; i++)
+            {
+                transform.GetChild(i).gameObject.SetActive(false);
+            }
+            gameOverScreen.SetActive(true);
+            SavePoints();
+        }
     }
 
-    public void MainMenu()
+    private void SavePoints()
     {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(0);
+        if (PlayerPrefs.GetInt("Distance") < player.points)
+        {
+            PlayerPrefs.SetInt("Distance", player.points);
+        }
     }
 
 }

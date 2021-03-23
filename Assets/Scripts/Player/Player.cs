@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     public Transform target;
     public GameObject player;
     public int points = 0;
+    public bool life { get; private set;} = true;
 
     PlayerController controller;
     PlayerMove move;
@@ -25,5 +26,13 @@ public class Player : MonoBehaviour
         controller.KeyboardController();
         controller.TouchController();
         move.Move(target);
+    }
+
+    private void OnCollisionEnter(Collision other) {
+        if(other.gameObject.CompareTag("Car"))
+        {
+            life = false;
+            Time.timeScale = 0f;
+        }
     }
 }
