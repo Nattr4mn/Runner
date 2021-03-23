@@ -30,6 +30,20 @@ public class PlayerController : MonoBehaviour
         { 
             Touch touch = Input.GetTouch(0);
 
+            if(touch.position.x > Screen.width / 2)
+                Move(-1);
+            else
+                Move(1);
+        }
+    }
+
+    public void SwipeController()
+    {
+
+        if (Input.touchCount > 0) 
+        { 
+            Touch touch = Input.GetTouch(0);
+
             switch (touch.phase) 
             {
                 case TouchPhase.Began : 
@@ -59,10 +73,10 @@ public class PlayerController : MonoBehaviour
                         Move(1);
         } 
     }
+    
 
     private void Move(float side)
     {
-        print(side);
         controller.position = Vector3.MoveTowards(controller.position, new Vector3(side * 2.5f, controller.position.y, controller.position.z), 50 * Time.deltaTime);
     }
 }

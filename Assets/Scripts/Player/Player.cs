@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     PlayerController controller;
     PlayerMove move;
 
+
     void Start()
     {
         controller = gameObject.AddComponent<PlayerController>();
@@ -25,12 +26,14 @@ public class Player : MonoBehaviour
     {
         controller.KeyboardController();
         controller.TouchController();
+        controller.SwipeController();
         move.Move(target);
     }
 
     private void OnCollisionEnter(Collision other) {
         if(other.gameObject.CompareTag("Car"))
         {
+            Handheld.Vibrate();
             life = false;
             Time.timeScale = 0f;
         }
