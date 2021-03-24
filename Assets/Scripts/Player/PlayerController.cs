@@ -77,6 +77,6 @@ public class PlayerController : MonoBehaviour
 
     private void Move(float side)
     {
-        controller.position = Vector3.MoveTowards(controller.position, new Vector3(side * 2.5f, controller.position.y, controller.position.z), 50 * Time.deltaTime);
+        controller.position = Vector3.MoveTowards(controller.position, new Vector3(side * 2f, controller.position.y, controller.position.z), 50 * Time.deltaTime);
     }
 }

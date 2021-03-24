@@ -5,21 +5,20 @@ using UnityEngine.UI;
 
 public class SoundSettings : MonoBehaviour
 {
-    public Slider music, effects;
+    public AudioSource music, effects;
 
     void Start()
     {
-        music.value = PlayerPrefs.GetFloat("Music");
-        effects.value = PlayerPrefs.GetFloat("Effects");
+        music.volume = PlayerPrefs.GetFloat("Music"); 
+        effects.volume = PlayerPrefs.GetFloat("Effects");
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (music.value != PlayerPrefs.GetFloat("Music"))
-            PlayerPrefs.SetFloat("Music", music.value);
+        if (music.volume != PlayerPrefs.GetFloat("Music"))
+            music.volume = PlayerPrefs.GetFloat("Music");
 
-        if (effects.value != PlayerPrefs.GetFloat("Effects"))
-            PlayerPrefs.SetFloat("Effects", effects.value);
+        if (effects.volume != PlayerPrefs.GetFloat("Effects"))
+            effects.volume = PlayerPrefs.GetFloat("Effects");
     }
 }

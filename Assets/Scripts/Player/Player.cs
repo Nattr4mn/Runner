@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
 
     PlayerController controller;
     PlayerMove move;
+    delegate void Control();
+    Control control;
 
 
     void Start()
@@ -19,14 +21,18 @@ public class Player : MonoBehaviour
         controller.Init(target);
         move = gameObject.AddComponent<PlayerMove>();
         move.Init(player);
+
+        if(PlayerPrefs.GetString("Control") == "Swipe")
+            control = controller.SwipeController;
+
+        if(PlayerPrefs.GetString("Control") == "Touch")
+            control = controller.TouchController;
     }
 
-    // Update is called once per frame
     void Update()
     {
         controller.KeyboardController();
-        controller.TouchController();
-        controller.SwipeController();
+        control();
         move.Move(target);
     }
 

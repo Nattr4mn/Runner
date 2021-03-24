@@ -164,7 +164,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 39629753}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5, y: 0, z: 18.41}
+  m_LocalPosition: {x: 0, y: 0, z: 18.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1082352960}
@@ -222,10 +222,10 @@ MonoBehaviour:
   speedChange: 0.1
   timeToAcceleration: 1
   distanceSpawn: 4
-  distanceToDestroy: 125
+  distanceToDestroy: 155
   spawnOffset: 0
   spawnObject:
-  - {fileID: 619935598451706984, guid: 2582c9a623611294489b821db2b4dca2, type: 3}
+  - {fileID: 3106304831518823281, guid: ba84acae29113bb48a173b3acc05a409, type: 3}
 --- !u!4 &48026568
 Transform:
   m_ObjectHideFlags: 0
@@ -234,7 +234,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48026566}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5, y: 0.3, z: -44.93}
+  m_LocalPosition: {x: 2, y: 0.3, z: -61.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -407,10 +407,10 @@ MonoBehaviour:
   speedChange: 0.1
   timeToAcceleration: 1
   distanceSpawn: 4
-  distanceToDestroy: 125
+  distanceToDestroy: 155
   spawnOffset: 0
   spawnObject:
-  - {fileID: 619935598451706984, guid: 2582c9a623611294489b821db2b4dca2, type: 3}
+  - {fileID: 3106304831518823281, guid: ba84acae29113bb48a173b3acc05a409, type: 3}
 --- !u!4 &177508723
 Transform:
   m_ObjectHideFlags: 0
@@ -419,7 +419,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 177508721}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.5, y: 0.3, z: -44.93}
+  m_LocalPosition: {x: -2, y: 0.3, z: -61.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -602,7 +602,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 261399524}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -8.42}
+  m_LocalPosition: {x: 2, y: 0, z: -8.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 39629755}
@@ -972,7 +972,7 @@ Transform:
   m_GameObject: {fileID: 350960549}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.001, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 8}
+  m_LocalScale: {x: 0.7, y: 1, z: 8}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
@@ -2164,8 +2164,8 @@ MonoBehaviour:
   speedChange: 0.1
   timeToAcceleration: 1
   distanceSpawn: 15
-  distanceToDestroy: 125
-  spawnOffset: 2.5
+  distanceToDestroy: 155
+  spawnOffset: 2
   spawnObject:
   - {fileID: 7825162363328981311, guid: 3022d6bfd6f7f5f4c9811c2e5d47c79f, type: 3}
   - {fileID: 3414292629941607920, guid: 063abe8a2afbf7e439b0527f049a0920, type: 3}
@@ -2187,7 +2187,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 945209714}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.002, z: -45}
+  m_LocalPosition: {x: 0, y: 0.002, z: -61.84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2497,7 +2497,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6935485471349426394, guid: 5bd9dcdfd21d5a04ba9c8ce01bd20be9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6935485471349426394, guid: 5bd9dcdfd21d5a04ba9c8ce01bd20be9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2963,8 +2963,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 2100000, guid: cf09d0a63e117764b8b2cb615499d260, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3262,7 +3261,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 0.15
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -3638,7 +3637,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 0
+    angle: 30
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -6961,7 +6960,7 @@ ParticleSystem:
         m_RotationOrder: 4
     maxLights: 20
   TrailModule:
-    enabled: 1
+    enabled: 0
     mode: 0
     ratio: 1
     lifetime:
@@ -7782,7 +7781,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1465490865}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: -0.292, y: 0.347, z: -2.047}
+  m_LocalPosition: {x: -0.341, y: 0.161, z: -1.844}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1082352960}
