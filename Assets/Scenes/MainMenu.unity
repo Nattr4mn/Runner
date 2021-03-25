@@ -956,7 +956,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50.2, y: 0.0000049472}
+  m_AnchoredPosition: {x: 45.750008, y: 0.0000049472}
   m_SizeDelta: {x: 191.5, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &362183731
@@ -986,7 +986,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 171
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1256,6 +1256,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76570d6922ea4174cb24e382ef23a89e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  record: {fileID: 701266127}
+  recordText: {fileID: 362183731}
   music: {fileID: 770607578}
   effects: {fileID: 1151866413}
   swipe: {fileID: 1201730353}
@@ -1416,7 +1418,6 @@ GameObject:
   - component: {fileID: 701266128}
   - component: {fileID: 701266130}
   - component: {fileID: 701266129}
-  - component: {fileID: 701266131}
   m_Layer: 5
   m_Name: Records
   m_TagString: Untagged
@@ -1483,18 +1484,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 701266127}
   m_CullTransparentMesh: 1
---- !u!114 &701266131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 701266127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cff72694b2922e24c94bdb75e666c16a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &713910154
 GameObject:
   m_ObjectHideFlags: 0
@@ -2430,7 +2419,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 531290985}
         m_TargetAssemblyTypeName: MainMenuUI, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 1
@@ -4140,31 +4129,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7920979191921352353, guid: ccf3dbd3ee562e142a80851e03ea7612, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.8933926
+      value: -4.6425047
       objectReference: {fileID: 0}
     - target: {fileID: 7920979191921352353, guid: ccf3dbd3ee562e142a80851e03ea7612, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2626143
+      value: 1.4578463
       objectReference: {fileID: 0}
     - target: {fileID: 7920979191921352353, guid: ccf3dbd3ee562e142a80851e03ea7612, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 23.844784
+      value: 25.20432
       objectReference: {fileID: 0}
     - target: {fileID: 7920979191921352353, guid: ccf3dbd3ee562e142a80851e03ea7612, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.06981348
+      value: -0.092261426
       objectReference: {fileID: 0}
     - target: {fileID: 7920979191921352353, guid: ccf3dbd3ee562e142a80851e03ea7612, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.001905661
+      value: -0.00039496156
       objectReference: {fileID: 0}
     - target: {fileID: 7920979191921352353, guid: ccf3dbd3ee562e142a80851e03ea7612, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.9971782
+      value: -0.99572724
       objectReference: {fileID: 0}
     - target: {fileID: 7920979191921352353, guid: ccf3dbd3ee562e142a80851e03ea7612, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.02753347
+      value: 0.0038759913
       objectReference: {fileID: 0}
     - target: {fileID: 7920979191921352353, guid: ccf3dbd3ee562e142a80851e03ea7612, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4236,7 +4225,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 50, y: 0}
+  m_AnchoredPosition: {x: 50, y: 3.9}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1648550013
@@ -4567,7 +4556,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 531290985}
         m_TargetAssemblyTypeName: MainMenuUI, Assembly-CSharp
         m_MethodName: Exit
         m_Mode: 1

@@ -40,9 +40,9 @@ public class GameUI : MonoBehaviour
 
     private void SavePoints()
     {
-        if (PlayerPrefs.GetInt("Distance") < player.points)
+        if (PlayerPrefs.GetInt("Points") < player.points)
         {
-            PlayerPrefs.SetInt("Distance", player.points);
+            PlayerPrefs.SetInt("Points", player.points);
         }
     }
 

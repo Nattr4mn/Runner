@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuUI : MonoBehaviour
 {
+    public GameObject record;
+    public Text recordText;
     public Slider music, effects;
     public Button swipe, touch;
 
@@ -25,6 +27,12 @@ public class MainMenuUI : MonoBehaviour
             
         music.value = PlayerPrefs.GetFloat("Music");
         effects.value = PlayerPrefs.GetFloat("Effects");
+
+        if(PlayerPrefs.GetInt("Points")>0)
+        {
+            record.SetActive(true);
+            recordText.text = PlayerPrefs.GetInt("Points").ToString();
+        }
     }
 
     private void Update() 
