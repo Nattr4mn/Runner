@@ -184,7 +184,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -217,8 +217,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbc242d4488748a4e9b36a26cd36eacf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  maxSpeed: 202
+  speed: 21
+  maxSpeed: 21
   speedChange: 0.1
   timeToAcceleration: 1
   distanceSpawn: 4
@@ -402,8 +402,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbc242d4488748a4e9b36a26cd36eacf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  maxSpeed: 202
+  speed: 21
+  maxSpeed: 21
   speedChange: 0.1
   timeToAcceleration: 1
   distanceSpawn: 4
@@ -569,8 +569,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbc242d4488748a4e9b36a26cd36eacf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  maxSpeed: 200
+  speed: 21
+  maxSpeed: 21
   speedChange: 0.1
   timeToAcceleration: 1
   distanceSpawn: 4
@@ -2159,8 +2159,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbc242d4488748a4e9b36a26cd36eacf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  maxSpeed: 202
+  speed: 21
+  maxSpeed: 21
   speedChange: 0.1
   timeToAcceleration: 1
   distanceSpawn: 15
@@ -2443,8 +2443,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbc242d4488748a4e9b36a26cd36eacf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  maxSpeed: 200
+  speed: 21
+  maxSpeed: 21
   speedChange: 0.1
   timeToAcceleration: 1
   distanceSpawn: 96

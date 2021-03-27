@@ -27,6 +27,7 @@ public class ObjectMove : MonoBehaviour
     {
         while(speed < maxSpeed)
         {
+            print("Current speed: " + speed);
             yield return new WaitForSeconds(timeToAcceleration);
             speed += speedChange;
         }
